@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The quote generator</title>
+        <link rel="stylesheet" type="text/css" href="ledecor.css"/>
+        <script src="jquery-2.2.4.min_2.js"></script>
+    </head>
+    <body>
+        <header><div id="header"><h1>রঙ্গিলা quotes</h1></div></header>
+        <div id="boxed">
+        
+        </div>
+        <div id="buttons"><pre>
+            <button class="button1" onclick="mybutton1()"></button>       <button class="button2" onclick="mybutton2()"></button>       <button class="button3" onclick="mybutton3()"></button>       <button class="button4" onclick="mybutton4()"></button>
+            
+            
+            
+            </pre>
+        </div>
+                <div class="dropdown">
+          <button onclick="myDropdown()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">রঙ্গিলা Quotes</a>
+            <a href="multilator.html">Multilator</a>
+            <a href="magic.html">Magic box!</a>
+          </div>
+        </div>
+        <div id="unit">
+            
+                <input type="text" id="input_value" placeholder="Enter Weight"/>
+            <select id="the_units">
+              <pre><option value="lbs">kg to lb</option>
+                <option value="kg">lb to kg</option>
+            </select>
+             <button title="change" id="changingButton" onclick="convert()">Go!</button> <span id="answer"></span></pre>
+            
+        </div>
+        <script>
+            var Quotation = new Array();
+            Quotation[0] = "It's not who I am underneath but what I do that defines me.";
+            Quotation[1] = "When you hit your lowest point, you are open to the greatest change.";
+            Quotation[2] = "When you're good at something, never do it for free.";
+            Quotation[3] = "Tell me, do you bleed? YOU WILL!";
+            Quotation[4] = "You either die a hero or live long enough to see yourself become a villain.";
+            Quotation[5] = "The needs of the many outweigh the needs of the few. Or the one.";
+            Quotation[6] = "I am vengeance, I am night, I, AM BATMAN!";
+            Quotation[7] = "Don't forget you weakness, the rest of the world will not, wear it like an armour and nobody can use it against you.";
+            Quotation[8] = "That's what I do, I drink and I know stuffs.";
+            Quotation[9] = "I am the one who knocks!";
+            Quotation[10] = "I'm the Doctor.";
+            Quotation[11] = "Revenge is like a two headed snake, one gives you pleasure while other slowly poisons you.";
+            Quotation[12] = "Winter is coming.";
+            Quotation[13] = "With great power comes great responsibilities";
+            Quotation[14] = "Why so serious?";
+            Quotation[15] = "When the chips are down, these civilized people will eat themselves up.";
+            Quotation[16] = "I'm not a monster, I'm just ahead of the curve.";
+            Quotation[17] = "Which is better? To live as a monster or die as a good man.";
+            Quotation[18] = "Madness as we know, is like, gravity. All it takes is a little, push!";
+            Quotation[19] = "Verily that way lies our hope, where sits our greatest fear.";
+            function mybutton1(){
+            document.getElementById("boxed").style.backgroundColor = "lightblue";
+            document.getElementById("boxed").style.border = "5px solid Darkblue";
+            var Q = Quotation.length;
+            var whichQuotation=Math.round(Math.random()*(Q-1));
+            document.getElementById("boxed").innerHTML = (Quotation[whichQuotation]);
+            }
+            function mybutton2(){
+            document.getElementById("boxed").style.backgroundColor = "orange";
+            document.getElementById("boxed").style.border = "5px solid red";
+            var Q = Quotation.length;
+            var whichQuotation=Math.round(Math.random()*(Q-1));
+            document.getElementById("boxed").innerHTML = (Quotation[whichQuotation]);
+            }
+            function mybutton3(){
+            document.getElementById("boxed").style.backgroundColor = "#A1F100";
+            document.getElementById("boxed").style.border = "5px solid green";
+            var Q = Quotation.length;
+            var whichQuotation=Math.round(Math.random()*(Q-1));
+            document.getElementById("boxed").innerHTML = (Quotation[whichQuotation]);
+            }
+            function mybutton4(){
+            document.getElementById("boxed").style.backgroundColor = "yellow";
+            document.getElementById("boxed").style.border = "5px solid orange";
+            var Q = Quotation.length;
+            var whichQuotation=Math.round(Math.random()*(Q-1));
+            document.getElementById("boxed").innerHTML = (Quotation[whichQuotation]);
+            }
+            function convert(){
+            var kg = 0.45359237;
+                if ($('#the_units').val() == "kg"){
+                    $("#answer").html($("#input_value").val()*kg);
+                }
+                else{
+                    $("#answer").html($("#input_value").val()/kg);
+                }
+                
+            }
+            function myDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+    </body>
+</html>

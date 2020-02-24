@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Magic!</title>
+    <script src="jquery-2.2.4.min_2.js"></script>
+    <link rel="stylesheet" type="text/css" href="ledecor3.css"/>
+    </head>
+    <body>
+    <div class="tetel">
+        <h1 style="color:white;text-align:center; font-size:40px; position:fixed; top:20%; left:30%">Le Magic Box</h1>
+        
+        <div id="dibba">
+            <div class="dropdown">
+          <button onclick="myDropdown()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">রঙ্গিলা Quotes</a>
+            <a href="multilator.html">Multilator</a>
+            <a href="magic.html">Magic box!</a>
+          </div>
+        </div>
+            <div id="asholJinish">
+                <div id="borodibba">
+                   
+                    <textarea rows="25" cols="80" placeholder="Write yo!" id="texts"></textarea>
+                    
+                    <div id="buttons"> 
+                        <button id="clear" onclick="exterminate()">Clear it</button>
+                        <button id="capitalize" onclick="buira()">Capitalize</button>
+                        <button id="sort" onclick="sort()">Sort</button>
+                        <button id="reverse" onclick="reverseFlash()">Reverse</button>
+                        <button id="blank" onclick="huda()">Strip Blank</button>
+                        <button id="addNumber" onclick="handao()">Add Numbers</button>
+                        <button id="shuffle" onclick="khichuri()">Shuffle</button>
+                   </div>
+                    
+                </div>    
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="magicscript.js"></script>
+    <script>
+         function myDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+</script>
+    </body>
+</html>

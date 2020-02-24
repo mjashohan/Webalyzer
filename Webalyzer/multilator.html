@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Part 2 | Number manipulation</title>
+        <link rel="stylesheet" type="text/css" href="ledecor2.css"/>
+        <script src="jquery-2.2.4.min_2.js"></script>
+    </head>
+    <body>
+        <header><h1>Multitator</h1></header>
+        <div class="dropdown">
+          <button onclick="myDropdown()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">রঙ্গিলা Quotes</a>
+            <a href="multilator.html">Multilator</a>
+            <a href="magic.html">Magic box!</a>
+          </div>
+        </div>
+        <div id="leResult">
+          <!---  <input type="text" id="formValueId" placeholder="Give coma, khatsi etar jonno"/>---->
+           Input the series of number: <input title="Hit" id="formValueId" placeholder="Give coma, khatsi onek" onkeyup="give_result()">
+            <p>
+            Maximum: <div id="max"></div>
+            Minimum: <div id="min"></div><br>
+            Sum: <div id="sum"></div><br>
+            Average: <div id="avg"></div><br>
+            The Reverse: <div id="reverseFlash"></div><br><br>
+        </p>
+           </div>
+         <script src="thescript.js"></script>
+        <script> function myDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+    </script>
+    </body>
+</html>
